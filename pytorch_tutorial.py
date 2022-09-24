@@ -42,9 +42,21 @@ print(y.size())
 
 # Converting a tensor into a numpy array
 # Caution, if this model is on the CPU instead of the GPU
-# then changing b will also change a
+# then changing b will also change a. Note that Numpy can only handle CPU tensors
+# so if we move our tensor to the GPU, we should move it back to the CPU in order to
+# convert back from a tensor to a numpy array
 a = torch.ones(5) 
 print(a)
 b = a.numpy()
 print(b)
 
+# check if CUDA is available
+if torch.cuda.is_available():
+  device = torch.device("cuda")
+  # This will create a tensor and create it on the GPU
+  x = torch.ones(5, device=device)
+  # This creates a tensor on the CPU and then moves it to the GPU
+  y = torch.ones(5)
+  y = y.to(device)
+  z = x + y 
+  
