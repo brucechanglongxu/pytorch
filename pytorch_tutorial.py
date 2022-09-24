@@ -12,3 +12,8 @@ x = torch.rand(5, 3)
 # This prints for all of the rows, but only the first column (index 0)
 print(x[:, 0])
 
+# This prints for all of the columns, but only the first row (index 1)
+print(x[1, :])
+
+
+
