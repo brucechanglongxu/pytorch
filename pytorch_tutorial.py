@@ -35,5 +35,8 @@ print(x)
 y = x.view(16)
 print(y)
 
+# If we take -1 as an input, then pytorch will automatically set the appropriate size
+y = x.view(-1, 8)
+print(y.size())
 
 
