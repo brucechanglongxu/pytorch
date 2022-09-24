@@ -1,2 +1,2 @@
 # pytorch
-Projects written in PyTorch
+Pytorch projects and tutorials. 
