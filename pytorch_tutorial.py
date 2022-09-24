@@ -40,4 +40,11 @@ print(y)
 y = x.view(-1, 8)
 print(y.size())
 
+# Converting a tensor into a numpy array
+# Caution, if this model is on the CPU instead of the GPU
+# then changing b will also change a
+a = torch.ones(5) 
+print(a)
+b = a.numpy()
+print(b)
 
